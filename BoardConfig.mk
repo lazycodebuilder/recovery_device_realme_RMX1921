@@ -146,7 +146,7 @@ TW_EXTRA_LANGUAGES := true
 # Brightness flags
 TW_BRIGHTNESS_PATH := /sys/class/backlight/panel0-backlight/brightness
 TW_MAX_BRIGHTNESS := 1023
-TW_DEFAULT_BRIGHTNESS := 150
+TW_DEFAULT_BRIGHTNESS := 40
 
 # CPU temp sysfs path, if it is zero all the time
 TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone10/temp

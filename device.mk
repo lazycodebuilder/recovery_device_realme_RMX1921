@@ -8,6 +8,12 @@
 # Userdata
 PRODUCT_FS_COMPRESSION := 1
 
+# Enable enforcement of VINTF manifest
+PRODUCT_ENFORCE_VINTF_MANIFEST := true
+
+# Enable full Treble compliance, which includes enforcing VINTF manifest
+PRODUCT_FULL_TREBLE := true
+
 # fastbootd
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.1-impl-mock \
