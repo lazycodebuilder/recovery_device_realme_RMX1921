@@ -22,27 +22,16 @@ Dimensions | 75.2 x 158.7 x 8.6 mm
 Battery | 4000 mAh, Li-Polymer
 OS | ColorOS 6.0 (Android 9.0 Pie)
 
-#![Realme RMX1921](https://github.com/lazycodebuilder/devices/blob/bcf32bca8e218e4f5438268ae2801734cdf2b2df/RMX1921.png)
+![Realme RMX1921](https://github.com/lazycodebuilder/devices/blob/bcf32bca8e218e4f5438268ae2801734cdf2b2df/RMX1921.png)
 
 ---
 ## Copyright notice
  ```
   /*
-  *  Copyright (C) 2024-2025 Android Open Source Project
-  *  Copyright (C) 2024-2025 The TeamWin Recovery Project
+  * Copyright (C) 2024-2025 Android Open Source Project
+  * Copyright (C) 2024-2025 The TeamWin Recovery Project
   *
-  * This program is free software: you can redistribute it and/or modify
-  * it under the terms of the GNU General Public License as published by
-  * the Free Software Foundation, either version 3 of the License, or
-  * (at your option) any later version.
-  *
-  * This program is distributed in the hope that it will be useful,
-  * but WITHOUT ANY WARRANTY; without even the implied warranty of
-  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-  * GNU General Public License for more details.
-  *
-  * You should have received a copy of the GNU General Public License
-  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  * SPDX-License-Identifier: Apache-2.0
   *
   */
   ```

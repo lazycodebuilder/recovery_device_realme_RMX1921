@@ -99,12 +99,10 @@ BOARD_HAS_LARGE_FILESYSTEM := true
 # Add root folders
 BOARD_ROOT_EXTRA_FOLDERS := firmware persist
 
-# Verified Boot
+# Enable Android Verified Boot (AVB)
 BOARD_AVB_ENABLE := true
-BOARD_AVB_ALGORITHM := SHA256_RSA4096
-BOARD_AVB_KEY_PATH := external/avb/test/data/testkey_rsa4096.pem
 
-# Enable chained vbmeta for recovery images
+# Enable AVB for the recovery image
 BOARD_AVB_RECOVERY_KEY_PATH := external/avb/test/data/testkey_rsa4096.pem
 BOARD_AVB_RECOVERY_ALGORITHM := SHA256_RSA4096
 BOARD_AVB_RECOVERY_ROLLBACK_INDEX := $(PLATFORM_SECURITY_PATCH_TIMESTAMP)
@@ -138,7 +136,7 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
 TW_THEME := portrait_hdpi
 
 # Add TW_DEVICE_VERSION
-TW_DEVICE_VERSION := cos6/rui1/rui2_LazymeaoProjects
+TW_DEVICE_VERSION := v0.1.0 | LazymeaoProjects
 
 # All language packs
 TW_EXTRA_LANGUAGES := true
