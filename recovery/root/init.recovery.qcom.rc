@@ -34,7 +34,6 @@ on fs
     write /proc/touchpanel/tp_fw_update 0
 
 on boot
-    start health-hal-2-1
     chmod 0777 /system/bin/postrecoveryboot.sh
     start postrecoveryboot
 

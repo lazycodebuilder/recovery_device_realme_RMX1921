@@ -14,6 +14,11 @@ PRODUCT_ENFORCE_VINTF_MANIFEST := true
 # Enable full Treble compliance, which includes enforcing VINTF manifest
 PRODUCT_FULL_TREBLE := true
 
+# health hal
+PRODUCT_PACKAGES += \
+    android.hardware.health@2.0-impl-default.recovery \
+    android.hardware.health@2.1-impl.recovery
+
 # fastbootd
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.1-impl-mock \

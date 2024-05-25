@@ -147,13 +147,10 @@ TW_MAX_BRIGHTNESS := 1023
 TW_DEFAULT_BRIGHTNESS := 40
 
 # CPU temp sysfs path, if it is zero all the time
-TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone10/temp
+TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone22/temp
 
 # Calculate the system date and time
 TARGET_RECOVERY_QCOM_RTC_FIX := true
-
-# Battery
-TW_USE_LEGACY_BATTERY_SERVICES := true
 
 # Statusbar icons flags
 TW_STATUS_ICONS_ALIGN := center
