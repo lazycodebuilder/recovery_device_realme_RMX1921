@@ -132,9 +132,6 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
 # TWRP Configuration
 TW_THEME := portrait_hdpi
 
-# Add TW_DEVICE_VERSION
-TW_DEVICE_VERSION := v0.1.0 | LazymeaoProjects
-
 # All language packs
 TW_EXTRA_LANGUAGES := true
 
@@ -148,12 +145,6 @@ TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone22/temp
 
 # Calculate the system date and time
 TARGET_RECOVERY_QCOM_RTC_FIX := true
-
-# Statusbar icons flags
-TW_STATUS_ICONS_ALIGN := center
-TW_CUSTOM_CPU_POS := 40
-TW_CUSTOM_CLOCK_POS := 300
-TW_CUSTOM_BATTERY_POS := 810
 
 # Use mke2fs for formatting ext4 partitions
 TARGET_USES_MKE2FS := true
@@ -173,8 +164,10 @@ TW_INCLUDE_LOGICAL := my_carrier my_company my_custom my_engineering my_heytap m
 # EDL Mode (qcom)
 TW_HAS_EDL_MODE := true
 
+ifeq ($(PBRP_INCLUDE_FASTBOOTD),true)
 # Fastbootd
 TW_INCLUDE_FASTBOOTD := true
+endif
 
 # Toolbox binaries
 TW_USE_TOOLBOX := true
@@ -202,3 +195,16 @@ TW_EXCLUDE_APEX := true
 
 # Use our own USB config
 TW_EXCLUDE_DEFAULT_USB_INIT := true
+
+## PBRP Flags
+
+# Disable default DM-Verity
+PB_DISABLE_DEFAULT_DM_VERITY := true
+# Disable default Treble compatibility
+PB_DISABLE_DEFAULT_TREBLE_COMP := true
+# Disable default AVB2 patching
+PB_DISABLE_DEFAULT_PATCH_AVB2 := true
+# Path to the torch (flashlight) LED
+PB_TORCH_PATH := "/sys/class/leds/led:torch_0"
+# Maximum brightness level for the torch LED
+PB_TORCH_MAX_BRIGHTNESS := 500

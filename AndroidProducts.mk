@@ -5,9 +5,9 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-PRODUCT_MAKEFILES := $(LOCAL_DIR)/twrp_RMX1921.mk
+PRODUCT_MAKEFILES := $(LOCAL_DIR)/pb_RMX1921.mk
 
 COMMON_LUNCH_CHOICES := \
-    twrp_RMX1921-user \
-    twrp_RMX1921-userdebug \
-    twrp_RMX1921-eng
+    pb_RMX1921-user \
+    pb_RMX1921-userdebug \
+    pb_RMX1921-eng

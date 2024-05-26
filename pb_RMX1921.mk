@@ -7,7 +7,7 @@
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := RMX1921
-PRODUCT_NAME := twrp_RMX1921
+PRODUCT_NAME := pb_RMX1921
 PRODUCT_BRAND := realme
 PRODUCT_MODEL := Realme XT
 PRODUCT_MANUFACTURER := realme
@@ -16,8 +16,8 @@ PRODUCT_RELEASE_NAME := RMX1921
 # Default device path for tree
 DEVICE_PATH := device/$(PRODUCT_BRAND)/$(PRODUCT_DEVICE)
 
-# Configure twrp common.mk
-$(call inherit-product, vendor/twrp/config/common.mk)
+# Configure pbrp common.mk
+$(call inherit-product, vendor/pb/config/common.mk)
 
 # Inherit from device
 $(call inherit-product, $(DEVICE_PATH)/device.mk)

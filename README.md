@@ -4,8 +4,9 @@
 ```sh
 source build/envsetup.sh
 export ALLOW_MISSING_DEPENDENCIES=true
-lunch twrp_RMX1921-eng
-make clean && mka recoveryimage | tree recovery.log
+export PBRP_INCLUDE_FASTBOOTD=true
+lunch pb_RMX1921-userdebug
+mka pbrp | tree build.log
 ```
 
 ## Specifications

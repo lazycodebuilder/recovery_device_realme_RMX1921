@@ -19,12 +19,17 @@ PRODUCT_PACKAGES += \
     android.hardware.health@2.0-impl-default.recovery \
     android.hardware.health@2.1-impl.recovery
 
+ifeq ($(PBRP_INCLUDE_FASTBOOTD),true)
 # fastbootd
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.1-impl-mock \
     android.hardware.fastboot@1.0-impl-mock \
     android.hardware.fastboot@1.0-impl-mock.recovery \
     fastbootd
+
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.fastbootd.available=true
+endif
 
 # qcom decryption
 PRODUCT_PACKAGES += \
