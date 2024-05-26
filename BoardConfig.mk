@@ -133,7 +133,7 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
 TW_THEME := portrait_hdpi
 
 # Add TW_DEVICE_VERSION
-TW_DEVICE_VERSION := v0.1.0 | LazymeaoProjects
+TW_DEVICE_VERSION := v0.1.0
 
 # All language packs
 TW_EXTRA_LANGUAGES := true
@@ -148,12 +148,6 @@ TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone22/temp
 
 # Calculate the system date and time
 TARGET_RECOVERY_QCOM_RTC_FIX := true
-
-# Statusbar icons flags
-TW_STATUS_ICONS_ALIGN := center
-TW_CUSTOM_CPU_POS := 40
-TW_CUSTOM_CLOCK_POS := 300
-TW_CUSTOM_BATTERY_POS := 810
 
 # Use mke2fs for formatting ext4 partitions
 TARGET_USES_MKE2FS := true
@@ -202,3 +196,57 @@ TW_EXCLUDE_APEX := true
 
 # Use our own USB config
 TW_EXCLUDE_DEFAULT_USB_INIT := true
+
+## SHRP Flags
+
+# Device codename
+SHRP_DEVICE_CODE := RMX1921
+# Path of your SHRP device tree
+SHRP_PATH := $(DEVICE_PATH)
+# Maintainer name
+SHRP_MAINTAINER := LazymeaoProjects
+# Recovery Type (for "About" section only)
+SHRP_REC_TYPE := SAR
+# Recovery path
+SHRP_REC := /dev/block/bootdevice/by-name/recovery
+# Use this flag only if SHRP_REC is set
+SHRP_HAS_RECOVERY_PARTITION := true
+
+# Emergency DownLoad mode
+SHRP_EDL_MODE := 1
+# Internal storage path
+SHRP_INTERNAL := /sdcard
+# External SDcard path
+SHRP_EXTERNAL := /sdcard1
+# USB OTG path
+SHRP_OTG := /usb_otg
+# Flashlight
+SHRP_FLASH := 1
+
+# For notch devices
+SHRP_NOTCH := true
+# SHRP Express, enables on-the-fly theme patching (also persistent) + persistent lock
+SHRP_EXPRESS := true
+# SHRP Express use Data save shrp files inside /data instead of /system
+# Note - SHRP_EXPRESS must be true to use this flag otherwise it won't work.
+SHRP_EXPRESS_USE_DATA := true
+# SHRP Dark mode, use this flag to have dark theme set by default
+SHRP_DARK := true
+# Custom led paths for flashlight
+SHRP_CUSTOM_FLASHLIGHT := true
+SHRP_FONP_1 := /sys/class/leds/led:torch_0/brightness
+# Max brightness of flashlight
+SHRP_FLASH_MAX_BRIGHTNESS := 500
+
+# Addon - Substratum Overlay (OMS -Normal- disabler)
+SHRP_SKIP_DEFAULT_ADDON_1 := true
+# Addon - Substratum Overlay (OMS -legacy- disabler)
+SHRP_SKIP_DEFAULT_ADDON_2 := true
+# Addon - Clear Fingerprint (remove fingerprint lock from system)
+# To store this addon into the recovery ramdisk instead set to "true" here.
+INC_IN_REC_ADDON_3 := true
+# Addon - Force Encryption (remove force encryption from your device)
+# To store this addon into the recovery ramdisk instead set to "true" here.
+INC_IN_REC_ADDON_4 := true
+# To hide the prebuilt magisk flash option from recovery, set value to "true".
+SHRP_EXCLUDE_MAGISK_FLASH := true
